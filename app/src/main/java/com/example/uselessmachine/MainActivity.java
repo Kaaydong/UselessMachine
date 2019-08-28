@@ -9,11 +9,12 @@ import android.widget.Switch;
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
-    private Switch switch;
+    private Switch theSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 }
