@@ -3,6 +3,7 @@ package com.example.uselessmachine;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -23,12 +24,34 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         wireWidgets();
         setListeners();
+        int color = Color.rgb(255,5,5);
+        button.setBackgroundColor(color);
     }
     public void setListeners() {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                new CountDownTimer(10000, 1000) {
+                    int tickNumber = 11;
+                    @Override
 
+                    // cancels the timer if switch is turned off before automatically being turned
+                    // off
+
+
+
+                        public void onTick (long l){
+
+                        tickNumber--;
+                            button.setText(tickNumber + "");
+                        }
+
+
+                    @Override
+                    public void onFinish() {
+                        int oniichan = 0/0;
+                    }
+                }.start();
             }
         });
 
