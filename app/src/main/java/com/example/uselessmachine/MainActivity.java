@@ -102,13 +102,35 @@ public class MainActivity extends AppCompatActivity {
                 buttonDo.setVisibility(View.INVISIBLE);
                 loading.setVisibility(View.VISIBLE);
                 text.setVisibility(View.VISIBLE);
-                new CountDownTimer(10000,1000)
+                text.setText("loading the processors");
+                new CountDownTimer(11000,100)
                 {
                     int x = 0;
                     @Override
                     public void onTick(long l) {
                         loading.setProgress(x);
-                        x+=10;
+                        x+=1;
+                        if(x==10)
+                        {text.setText("Loading The Raccoons Into The Cage");}
+                        else if(x==20)
+                        {text.setText("Petting The Kittens");}
+                        else if(x==30)
+                        {text.setText("Loading The Lolis Into The Van");}
+                        else if(x==40)
+                        {text.setText("Committing Head Pats ");}
+                        else if(x==50)
+                        {text.setText("Loading The Cannons!");}
+                        else if(x==60)
+                        {text.setText("Locked And Loaded");}
+                        else if(x==70)
+                        {text.setText("Waging War");}
+                        else if(x==80)
+                        {text.setText("Wagging Tail");}
+                        else if(x==90)
+                        {text.setText("Download Complete");}
+                        else if(x==100)
+                        {text.setText("Loading the Program");}
+
                     }
 
                     @Override
